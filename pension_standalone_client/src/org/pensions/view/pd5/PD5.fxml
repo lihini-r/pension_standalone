@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pensions.view.pd5.PD5Controller">
+   <children>
+      <BorderPane layoutY="-7.0" prefHeight="650.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="90.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="100.0" prefWidth="100.0" text="Image" />
+                  <Label prefHeight="100.0" text="Pensioner registration (PD5 application)">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox spacing="20.0" style="-fx-border-width: 0 2 2 2; -fx-border-color: #0078D7;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="45.0" prefWidth="1085.0">
+                     <children>
+                        <GridPane fx:id="basicNavigator" onMouseClicked="#formWizardBasicBtnClicked" styleClass="wizadPanel" HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label styleClass="navHeaderTxt" text="Step 1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="34.0" text="Basic Information" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="20.0" top="-7.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane onMouseClicked="#formWizardGratuityBtnClicked" styleClass="wizadPanel" HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label styleClass="navHeaderTxt" text="Step 2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label prefHeight="34.0" text="Gratuity Information" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="20.0" top="-7.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane onMouseClicked="#formWizardSpouseBtnClicked" styleClass="wizadPanel" HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label styleClass="navHeaderTxt" text="Step 3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="34.0" text="Spouse Information" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="20.0" top="-7.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane onMouseClicked="#formWizardDependentBtnClicked" styleClass="wizadPanel" HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label styleClass="navHeaderTxt" text="Step 4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="34.0" text="Dependent Information" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="20.0" top="-7.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane onMouseClicked="#formWizardProportionalBtnClicked" styleClass="wizadPanel" HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label styleClass="navHeaderTxt" text="Step 5">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="34.0" text="Proportional Information" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="20.0" top="-7.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <StackPane prefHeight="423.0" prefWidth="1100.0">
+                     <children>
+                        <AnchorPane fx:id="basicTab">
+                           <children>
+                              <AnchorPane layoutX="44.0" layoutY="25.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <GridPane layoutX="6.0" prefHeight="44.0" prefWidth="495.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="161.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="330.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Office Name" />
+                                          <ComboBox fx:id="officeName" prefHeight="29.0" prefWidth="333.0" promptText="Select Office Name" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="6.0" layoutY="42.0" prefHeight="44.0" prefWidth="496.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="162.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="91.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="241.0" minWidth="10.0" prefWidth="241.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Employee Name" />
+                                          <ComboBox fx:id="empSalutaion" prefHeight="29.0" prefWidth="85.0" GridPane.columnIndex="1" />
+                                          <TextField fx:id="empName" GridPane.columnIndex="2" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="6.0" layoutY="84.0" prefHeight="44.0" prefWidth="497.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="163.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="334.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Employee Address" />
+                                          <TextField fx:id="empAddress" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="6.0" layoutY="126.0" prefHeight="44.0" prefWidth="497.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="164.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="337.0" minWidth="10.0" prefWidth="333.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="National ID Card No" />
+                                          <TextField fx:id="empNic" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="6.0" layoutY="168.0" prefHeight="44.0" prefWidth="499.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="164.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="335.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Designation" />
+                                          <ComboBox fx:id="designation" prefHeight="29.0" prefWidth="333.0" promptText="Select designation" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="6.0" layoutY="210.0" prefHeight="44.0" prefWidth="506.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="164.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.0" minWidth="10.0" prefWidth="342.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Date Of Deceased" />
+                                          <DatePicker fx:id="deceasedDate" prefHeight="29.0" prefWidth="177.0" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="6.0" layoutY="252.0" prefHeight="44.0" prefWidth="506.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="171.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="69.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.0" minWidth="10.0" prefWidth="265.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Is Post Pensionable" />
+                                          <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="radioPensionable" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="No" toggleGroup="$radioPensionable" GridPane.columnIndex="2" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="560.0" prefHeight="44.0" prefWidth="444.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="191.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="95.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="158.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Is Post Permanent" />
+                                          <RadioButton mnemonicParsing="false" text="Yes" GridPane.columnIndex="1">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="radioPermanent" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="No" toggleGroup="$radioPermanent" GridPane.columnIndex="2" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="557.0" layoutY="42.0" prefHeight="44.0" prefWidth="451.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="194.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="98.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="159.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Service On Central Or Provincial" />
+                                          <RadioButton mnemonicParsing="false" text="Provincial" GridPane.columnIndex="1">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="radioCentralPrivincial" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Central" toggleGroup="$radioCentralPrivincial" GridPane.columnIndex="2" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="560.0" layoutY="84.0" prefHeight="44.0" prefWidth="447.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="193.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="254.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="W &amp; OP No" />
+                                          <TextField fx:id="wnopNo" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="980.0" layoutY="382.0" prefHeight="30.0" prefWidth="83.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button fx:id="basicNext" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" text="NEXT">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin></Button>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="gratuityTab" style="-fx-background-color: transparent;">
+                           <children>
+                              <ScrollPane layoutY="10.0" style="-fx-background-color: transparent;" vvalue="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <content>
+                                  <AnchorPane prefHeight="400.0" prefWidth="1052.0" style="-fx-background-color: transparent;">
+                                       <children>
+                                          <GridPane prefHeight="44.0" prefWidth="1050.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="690.0" minWidth="10.0" prefWidth="690.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="0.0" prefWidth="125.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="0.0" prefWidth="124.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="0.0" prefWidth="111.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Period of service relevant to the death gratuity calculation" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Years" GridPane.columnIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets left="45.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Months" GridPane.columnIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets left="40.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Days" GridPane.columnIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets left="40.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField fx:id="serviceYears" prefWidth="130.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="serviceMonths" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="serviceDays" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane layoutX="48.0" layoutY="55.0" prefHeight="30.0" prefWidth="958.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </GridPane>
+                                          <GridPane layoutY="85.0" prefHeight="156.0" prefWidth="529.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="360.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="169.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Annual consolidated salary of the date of retirement">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Dues payable to the government" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Allowances" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Gross annual salary applicable to the calculation of death gratuity" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField fx:id="annualSalary" text="0.00" GridPane.columnIndex="1" />
+                                                <TextField fx:id="govDeductions" prefHeight="27.0" prefWidth="169.0" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="allowances" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="grossSalary" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                             </children>
+                                          </GridPane>
+                                          <CheckBox fx:id="checkNoPay" layoutX="555.0" layoutY="90.0" mnemonicParsing="false" text="No no pay leaves" />
+                                          <GridPane fx:id="noPayGrid" layoutX="554.0" layoutY="130.0" prefHeight="123.0" prefWidth="494.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="130.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="341.0" minWidth="10.0" prefWidth="309.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="0.0" prefWidth="55.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="54.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="51.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Total no pay leave period" GridPane.rowIndex="1" />
+                                                <Label text="No pay leave that can be set off according to circular 9/98" GridPane.rowIndex="2" />
+                                                <Label text="Net no pay leave" GridPane.rowIndex="3" />
+                                                <Label text="Years" GridPane.columnIndex="1" />
+                                                <Label text="Months" GridPane.columnIndex="2" />
+                                                <Label text="Days" GridPane.columnIndex="3" />
+                                                <TextField fx:id="noPayYears" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="noPayMonths" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="noPayDays" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="setOffYears" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="setOffMonths" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="setOffDays" text="0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="netNopayYears" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="netNopayMonths" text="0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="netNopayDays" text="0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane layoutX="476.0" layoutY="131.0" prefHeight="30.0" prefWidth="27.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Line opacity="0.16" rotate="90.0" startX="-130.0" />
+                                             </children>
+                                          </GridPane>
+                                          <GridPane layoutX="48.0" layoutY="250.0" prefHeight="30.0" prefWidth="958.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </GridPane>
+                                          <GridPane layoutX="2.0" layoutY="275.0" prefHeight="246.0" prefWidth="1036.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="694.0" minWidth="10.0" prefWidth="672.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="0.0" prefWidth="187.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="177.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Percentage entitled if service period is greater than 25 years" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Percentage entitled if service period is less than 25 years" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Deductable percentage 1% for each 6 months " GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Deductable percentage 0.2% for each no pay month" GridPane.rowIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label GridPane.rowIndex="1" />
+                                                <Label text="Net percentage" GridPane.rowIndex="5">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField fx:id="greaterReduced" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="greaterUnreduced" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="lessReduced" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="lessUnreduced" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="deductLessReduced" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="deductLessUnreduced" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="deductNopayReduced" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="deductNopayUnreduced" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="netPecentageReduced" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="netPecentageUnreduced" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                   <GridPane.margin>
+                                                      <Insets right="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label text="Reduced %" GridPane.columnIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets left="60.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Unreduced %" GridPane.columnIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets left="60.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane layoutX="48.0" layoutY="520.0" prefHeight="30.0" prefWidth="958.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Separator prefWidth="200.0" />
+                                             </children>
+                                          </GridPane>
+                                          <GridPane layoutX="2.0" layoutY="551.0" prefHeight="176.0" prefWidth="1032.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="864.0" minWidth="10.0" prefWidth="774.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="0.0" prefWidth="127.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Gratuity amount">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Gross annual salary at time of death" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Highest amount taken as death gratuity" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Net gratuity amount" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField fx:id="gratuityAmount" text="0.00" GridPane.columnIndex="1" />
+                                                <TextField fx:id="grossAnnualSal" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="deathGratuity" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="netGratuity" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                             </children>
+                                          </GridPane>
+                                          <GridPane layoutX="952.0" layoutY="737.0" prefHeight="40.0" prefWidth="85.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button fx:id="gratuityNext" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" text="NEXT" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="spouseTab" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <CheckBox fx:id="checkUnmarried" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" text="Please tick if employee is unmarried" />
+                                    <GridPane fx:id="spouseGrid" layoutY="48.0" prefHeight="351.0" prefWidth="677.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="532.0" minWidth="10.0" prefWidth="359.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="0.0" prefWidth="398.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Name in Full">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Date of Birth" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Address" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Contact No" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Bank" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Branch" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Account No" GridPane.rowIndex="6">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Nic No" GridPane.rowIndex="7">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextField fx:id="spouseName" GridPane.columnIndex="1" />
+                                          <DatePicker fx:id="spouseDob" prefHeight="29.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="spouseAddress" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="spouseContactNo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <ComboBox fx:id="spouseBank" prefHeight="29.0" prefWidth="177.0" promptText="Select Bank" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <ComboBox fx:id="spouseBranch" prefHeight="29.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField fx:id="spouseAccNo" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <TextField fx:id="spouseNic" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="980.0" layoutY="382.0" prefHeight="29.0" prefWidth="81.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button fx:id="spouseNext" mnemonicParsing="false" onMouseClicked="#calculateProportions" prefHeight="29.0" prefWidth="76.0" text="NEXT">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin></Button>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="dependentTab" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <CheckBox fx:id="checkDependent" layoutX="23.0" layoutY="200.0" mnemonicParsing="false" text="Tick if employee has no dependents" />
+                              <GridPane fx:id="dependentGrid" layoutX="14.0" layoutY="228.0" prefHeight="181.0" prefWidth="1037.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="458.0" minWidth="10.0" prefWidth="237.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="401.0" minWidth="10.0" prefWidth="329.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.0" minWidth="10.0" prefWidth="121.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="362.0" minWidth="10.0" prefWidth="362.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Name in Full">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Date of Birth" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Marital Status" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Type" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="NIC No" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Address" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="30.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Bank" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="30.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Branch" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="30.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Account No" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets left="30.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <TextField fx:id="dependName" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets right="10.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <DatePicker fx:id="dependentDob" prefHeight="29.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="dependMarital" prefHeight="29.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <ComboBox fx:id="dependType" prefHeight="29.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="dependentNic" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets right="10.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField fx:id="dependAddress" GridPane.columnIndex="3">
+                                       <GridPane.margin>
+                                          <Insets right="10.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <ComboBox fx:id="dependBank" prefHeight="29.0" prefWidth="177.0" promptText="Select Bank" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="dependBranch" prefWidth="177.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <TextField fx:id="dependAccNo" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets right="10.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="869.0" layoutY="382.0" prefHeight="29.0" prefWidth="178.0">
+                                 <children>
+                                    <Button fx:id="dependAdd" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" text="ADD" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin></Button>
+                                    <Button fx:id="dependNext" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" text="NEXT" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets left="92.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                 </rowConstraints>
+                              </GridPane>
+                              <TableView fx:id="dependentsTable" layoutX="14.0" onMouseClicked="#editDependentField" prefHeight="186.0">
+                                 <columns>
+                                    <TableColumn fx:id="tblClDependent_name" prefWidth="95.0" text="NAME" />
+                                    <TableColumn fx:id="tblClDependent_dob" prefWidth="96.0" text="DOB" />
+                                    <TableColumn fx:id="tblClDependent_maritalStatus" prefWidth="119.0" text="MARITAL STATUS" />
+                                    <TableColumn fx:id="tblClDependent_type" prefWidth="83.0" text="TYPE" />
+                                    <TableColumn fx:id="tblClDependent_address" prefWidth="128.0" text="ADDRESS" />
+                                    <TableColumn fx:id="tblClDependent_bank" prefWidth="115.0" text="BANK" />
+                                    <TableColumn fx:id="tblClDependent_branch" prefWidth="121.0" text="BRANCH" />
+                                    <TableColumn fx:id="tblClDependent_nicno" prefWidth="147.0" text="NIC NO" />
+                                    <TableColumn fx:id="tblClDependent_accountNo" prefWidth="134.0" text="ACCOUNT NO" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="proportionalTab" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="25.0" prefHeight="30.0" prefWidth="657.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="280.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.0" minWidth="0.0" prefWidth="36.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="341.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Net gratuity amount" />
+                                    <Label fx:id="gratuityProportions" text="Label" GridPane.columnIndex="2" />
+                                    <Label text="Rs" GridPane.columnIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <TableView fx:id="proportionsTable" layoutX="25.0" layoutY="40.0" prefHeight="203.0" prefWidth="1014.0">
+                                 <columns>
+                                    <TableColumn fx:id="tblClProportions_name" prefWidth="190.0" text="NAME" />
+                                    <TableColumn fx:id="tblClProportions_bank" prefWidth="203.0" text="BANK" />
+                                    <TableColumn fx:id="tblClProportions_branch" prefWidth="191.0" text="BRANCH" />
+                                    <TableColumn fx:id="tblClProportions_accno" prefWidth="206.0" text="ACCOUNT NUMBER" />
+                                    <TableColumn fx:id="tblClProportions_amount" maxWidth="250.0" prefWidth="210.0" text="AMOUNT (RS)" />
+                                 </columns>
+                              </TableView>
+                              <CheckBox fx:id="checkCertified" layoutX="25.0" layoutY="262.0" mnemonicParsing="false" text="Herby I Certified all of the above details are correct &amp; get responsibility for all the data" />
+                              <GridPane fx:id="submitBtnGrid" layoutX="960.0" layoutY="382.0" prefHeight="30.0" prefWidth="88.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="94.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="submit" mnemonicParsing="false" onAction="#insertDeceasedPensioner" prefHeight="29.0" prefWidth="82.0" text="SUBMIT" />
+                                 </children>
+                              </GridPane>
+                              <GridPane fx:id="verifyRejBtnGrid" layoutX="870.0" layoutY="382.0" prefHeight="30.0" prefWidth="182.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="verifyState" mnemonicParsing="false" onAction="#acceptBtnActionHandler" prefHeight="29.0" prefWidth="81.0" text="VERIFY" />
+                                    <Button fx:id="rejectState" mnemonicParsing="false" onAction="#rejectBtnActionHandler" prefHeight="29.0" prefWidth="81.0" text="REJECT" GridPane.columnIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <TextArea layoutX="27.0" layoutY="319.0" prefHeight="95.0" prefWidth="421.0" wrapText="true" />
+                              <Label layoutX="28.0" layoutY="299.0" text="Remarks" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../css/custom.css" />
+      <URL value="@../../css/forms.css" />
+      <URL value="@../../css/JMetroLightTheme.css" />
+   </stylesheets>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

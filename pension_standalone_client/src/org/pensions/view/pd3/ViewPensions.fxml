@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="350.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pensions.view.pd3.ViewPensionsController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="7.0" />
+   </padding>
+   <children>
+      <StackPane layoutX="5.0" layoutY="7.0" prefHeight="308.0" prefWidth="800.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="colPensionNumber" prefWidth="129.0" resizable="false" text="Pension number" />
+                <TableColumn fx:id="colType" editable="false" minWidth="0.0" prefWidth="136.0" resizable="false" text="Type" />
+                  <TableColumn fx:id="colOffice" editable="false" prefWidth="209.0" resizable="false" sortable="false" text="Office" />
+                  <TableColumn fx:id="colCircular" editable="false" prefWidth="142.0" resizable="false" sortable="false" text="Circular" />
+                  <TableColumn fx:id="colState" prefWidth="163.0" text="State" />
+              </columns>
+               <contextMenu>
+                  <ContextMenu style="-fx-padding: 0px 0px 0px 0px; -fx-min-width: 200px;">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#viewHistory" text="View History" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+            <Region fx:id="backDrop" prefHeight="350.0" prefWidth="800.0" style="-fx-background-color: rgba(196,196,196, 0.5);" visible="false" />
+            <AnchorPane fx:id="prograssIndicatorContainer" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ProgressIndicator fx:id="progressIndicator" layoutX="346.0" layoutY="68.0" prefHeight="86.0" prefWidth="98.0" progress="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <HBox alignment="CENTER_RIGHT" layoutY="265.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="308.0">
+         <children>
+            <Button fx:id="btnMore" defaultButton="true" minWidth="100.0" mnemonicParsing="false" onAction="#btnMoreActionHandler" prefWidth="100.0" text="More" />
+            <Button fx:id="btnClose" cancelButton="true" minWidth="100.0" mnemonicParsing="false" onAction="#close" prefWidth="100.0" text="Close" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../css/JMetroLightTheme.css" />
+      <URL value="@../../css/custom.css" />
+   </stylesheets>
+</AnchorPane>

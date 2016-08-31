@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pensions.view.pd3.DeductionReportController">
+   <children>
+      <Label layoutX="41.0" layoutY="31.0" prefHeight="26.0" prefWidth="270.0" text="Generate Deduction Report" textFill="#2f912f">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="124.0" layoutY="89.0" text="FROM">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <DatePicker fx:id="generatedDateFrom" layoutX="225.0" layoutY="85.0" prefHeight="25.0" prefWidth="195.0" />
+      <Button defaultButton="true" layoutX="375.0" layoutY="244.0" mnemonicParsing="false" onAction="#generateDeductionReportActionhandler" prefHeight="25.0" prefWidth="88.0" text="Generate">
+         <stylesheets>
+            <URL value="@../../css/custom.css" />
+            <URL value="@../../css/JMetroLightTheme.css" />
+         </stylesheets>
+      </Button>
+      <Button layoutX="282.0" layoutY="244.0" mnemonicParsing="false" onAction="#closeButtonHandler" prefHeight="25.0" prefWidth="82.0" text="Close">
+         <stylesheets>
+            <URL value="@../../css/custom.css" />
+            <URL value="@../../css/JMetroLightTheme.css" />
+         </stylesheets>
+      </Button>
+      <DatePicker fx:id="generatedDateTo" layoutX="226.0" layoutY="146.0" prefHeight="25.0" prefWidth="195.0" />
+      <Label layoutX="124.0" layoutY="150.0" text="TO">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

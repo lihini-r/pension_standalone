@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pensions.view.dashboard.DasboardController">
+   <children>
+      <ImageView fx:id="img" fitHeight="121.0" fitWidth="250.0" layoutX="64.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/pending.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgg" fitHeight="121.0" fitWidth="250.0" layoutX="64.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/verified.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgreject" fitHeight="121.0" fitWidth="250.0" layoutX="790.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/reject.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgr" fitHeight="121.0" fitWidth="250.0" layoutX="433.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/recieved.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgsath" fitHeight="121.0" fitWidth="250.0" layoutX="434.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/sathkara1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="250.0" layoutX="790.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lblVerifiedCount" layoutX="84.0" layoutY="320.0" prefHeight="20.0" prefWidth="81.0" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRejectCount" layoutX="809.0" layoutY="161.0" prefHeight="20.0" prefWidth="81.0" textFill="#fcf6f6">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPendingCount" layoutX="84.0" layoutY="161.0" prefHeight="23.0" prefWidth="81.0" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font></Label>
+      <Separator layoutX="40.0" layoutY="85.0" prefHeight="27.0" prefWidth="1021.0" />
+      <Label layoutX="64.0" layoutY="45.0" text="Application Status Track" textFill="#4b9771">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+package org.pensions.model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class PensionLogDTO {
+	
+	private String state;
+	private String timestamp;
+	private String responsibleEmployee;
+	
+	public PensionLogDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public synchronized String getState() {
+		return state;
+	}
+
+	public synchronized String getTimestamp() {
+		return timestamp;
+	}
+
+	public synchronized String getResponsibleEmployee() {
+		return responsibleEmployee;
+	}
+
+	public synchronized void setState(String state) {
+		this.state = state;
+	}
+
+	public synchronized void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	public synchronized void setResponsibleEmployee(String responsibleEmployee) {
+		this.responsibleEmployee = responsibleEmployee;
+	}
+
+}

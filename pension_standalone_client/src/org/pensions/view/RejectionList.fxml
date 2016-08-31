@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pensions.view.RejectionListController">
+   <children>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="90.0" prefWidth="700.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label prefHeight="100.0" prefWidth="100.0" text="Image" />
+            <Label prefHeight="100.0" text="Rejection list (PD5 application)">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <Region HBox.hgrow="ALWAYS" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nic no" wrappingWidth="51.53515625" />
+            <TextField fx:id="txt_filterField" />
+         </children>
+      </HBox>
+      <TableView fx:id="tbl_rejectionTable" layoutX="34.0" layoutY="146.0" onMouseClicked="#openRejectionView" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+         <columns>
+            <TableColumn fx:id="tblCl_id" prefWidth="230.0" text="Pensioner No" />
+            <TableColumn fx:id="tblCl_name" prefWidth="232.0" text="Name" />
+            <TableColumn fx:id="tblCl_nic" prefWidth="224.0" text="Nic No" />
+            <TableColumn fx:id="tblCl_reason" prefWidth="300.0" text="Reason" />
+         </columns>
+      </TableView>
+   </children>
+   <stylesheets>
+      <URL value="@../css/custom.css" />
+      <URL value="@../css/JMetroLightTheme.css" />
+   </stylesheets>
+</AnchorPane>

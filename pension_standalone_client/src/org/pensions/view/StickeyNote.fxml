@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="276.0" prefWidth="339.0" stylesheets="@../css/JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pensions.view.StickeyNoteController">
+   <children>
+      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <HBox layoutY="192.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="226.0">
+         <children>
+            <Region prefHeight="27.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" onAction="#clearBtnActionHandler" prefHeight="25.0" prefWidth="80.0" text="Clear" />
+            <Button layoutX="169.0" layoutY="23.0" mnemonicParsing="false" onAction="#copyBtnactionHandler" prefHeight="25.0" prefWidth="80.0" text="Copy" />
+            <Button mnemonicParsing="false" onAction="#colseButtonActionHandler" prefHeight="25.0" prefWidth="80.0" text="Close">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="13.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

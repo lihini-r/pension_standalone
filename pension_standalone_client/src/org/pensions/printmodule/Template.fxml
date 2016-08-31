@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="595.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pensions.printmodule.TemplateController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="1022.0" fitWidth="733.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="-11.0">
+         <image>
+            <Image url="@letter.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="wnoptxt" layoutX="580.0" layoutY="247.0" prefHeight="17.0" prefWidth="84.0" />
+      <Label fx:id="currentDate" layoutX="599.0" layoutY="162.0" prefHeight="17.0" prefWidth="84.0" />
+      <Label fx:id="date" layoutX="482.0" layoutY="324.0" prefHeight="17.0" prefWidth="148.0" />
+      <Label layoutX="114.0" layoutY="162.0" prefHeight="17.0" prefWidth="141.0" text="Pen/P&amp;D/2015/Sathkara" />
+      <Label fx:id="lblpensionNumber" layoutX="580.0" layoutY="221.0" prefHeight="17.0" prefWidth="84.0" />
+   </children>
+</AnchorPane>

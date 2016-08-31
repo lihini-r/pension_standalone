@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="425.0" prefWidth="747.0" style="-fx-background-color: #0055A0;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pensions.view.LoginViewController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="907.0" stylesheets="@../css/JMetroLightTheme.css">
+         <children>
+            <ImageView fx:id="userDummyImage" fitHeight="179.0" fitWidth="185.0" layoutX="281.0" layoutY="70.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../resources/dummyUser.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtUserName" layoutX="276.0" layoutY="261.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="195.0" promptText="User Name" style="-fx-border-color: rgb(255,255,255); -fx-text-fill: rgb(255,255,255);" />
+            <PasswordField fx:id="txtPassword" layoutX="276.0" layoutY="295.0" onKeyPressed="#enterKeyPressed" prefHeight="25.0" prefWidth="195.0" promptText="Password" style="-fx-border-color: rgb(255,255,255); -fx-text-fill: rgb(255,255,255);" />
+            <Button blendMode="HARD_LIGHT" defaultButton="true" layoutX="276.0" layoutY="334.0" mnemonicParsing="false" onAction="#loginButtonActionHandler" onKeyPressed="#enterKeyPressed" prefHeight="24.0" prefWidth="195.0" text="Log In">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow level="0.13" />
+               </effect></Button>
+            <HBox layoutX="713.0" layoutY="391.0" prefHeight="20.0" prefWidth="20.0" spacing="5.0">
+               <children>
+                  <Label onMouseClicked="#exitBtnActionHandler" prefHeight="20.0" prefWidth="20.0" style="-fx-background-image: url(/com/rocker/resources/logout.png); -fx-background-repeat: no-repeat;" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" layoutX="7.0" prefHeight="30.0" style="-fx-background-color: #212121;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label onMouseClicked="#closeBtnActionHandler" prefHeight="30.0" prefWidth="40.0" styleClass="closeButton" text="     X" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/custom.css" />
+      <URL value="@../css/JMetroLightTheme.css" />
+   </stylesheets>
+</StackPane>

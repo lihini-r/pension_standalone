@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="226.0" prefWidth="218.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pensions.view.ReportSelectionController">
+   <children>
+      <GridPane fx:id="sideNavGrid" layoutX="18.0" layoutY="42.0" prefHeight="143.0" prefWidth="202.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="lblPaymentReport" onMouseClicked="#paymentReportActionHandler" prefHeight="51.0" prefWidth="260.0" styleClass="sideBarManuItem" text="Monthly Pension Report" textFill="#999999" />
+            <Label fx:id="lblGratuityReport" onMouseClicked="#gratuityReportActionHandler" prefHeight="50.0" prefWidth="224.0" styleClass="sideBarManuItem" text="Gratuity Report" textFill="#999999" GridPane.rowIndex="1" />
+            <Label onMouseClicked="#deductionReportActionHandler" prefHeight="87.0" prefWidth="200.0" styleClass="sideBarManuItem" text="Deduction Report" textFill="#999999" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

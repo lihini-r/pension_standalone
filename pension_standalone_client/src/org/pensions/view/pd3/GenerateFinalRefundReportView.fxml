@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="org.pensions.view.pd3.GenerateFinalRefundReport">
+   <children>
+      <Label layoutX="187.0" layoutY="182.0" text="Generate Refund Report">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="441.0" prefHeight="20.0" prefWidth="172.0" text="Generate Refund Report">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btngeneratereport" defaultButton="true" layoutX="706.0" layoutY="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="241.0" text="Generate Report">
+         <stylesheets>
+            <URL value="@../../css/custom.css" />
+            <URL value="@../../css/JMetroLightTheme.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="btnretriewreports" defaultButton="true" layoutX="709.0" layoutY="482.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="241.0" text="Retriew Report">
+         <stylesheets>
+            <URL value="@../../css/JMetroLightTheme.css" />
+            <URL value="@../../css/custom.css" />
+         </stylesheets>
+      </Button>
+      <ComboBox fx:id="comborefundreport" layoutX="709.0" layoutY="439.0" prefHeight="25.0" prefWidth="241.0" />
+      <Separator layoutX="25.0" layoutY="308.0" prefHeight="32.0" prefWidth="1051.0" />
+   </children>
+</AnchorPane>

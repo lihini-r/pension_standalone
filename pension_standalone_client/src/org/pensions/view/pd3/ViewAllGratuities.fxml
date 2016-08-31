@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pensions.view.pd3.AllGratuitiesController">
+    <children>
+        <BorderPane layoutY="-7.0" prefHeight="650.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <HBox prefHeight="90.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                    <children>
+                  <ImageView fitHeight="75.0" fitWidth="88.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/bsalary1.png" />
+                     </image>
+                     <effect>
+                        <Reflection bottomOpacity="0.06" fraction="0.66" topOpacity="0.1" />
+                     </effect>
+                  </ImageView>
+                        <Label prefHeight="90.0" prefWidth="320.0" text="VIEW GRATUITIES" textFill="#2f912f">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableGratuities" layoutY="20.0" prefHeight="400.0" prefWidth="1073.0">
+                    <columns>
+                      <TableColumn fx:id="colPensionNo" prefWidth="143.0" text="PENSION NO" />
+                      <TableColumn fx:id="colName" prefWidth="241.0" text="NAME" />
+                        <TableColumn fx:id="colNic" prefWidth="239.0" text="NIC" />
+                        <TableColumn fx:id="colDesignation" minWidth="9.0" prefWidth="216.0" text="DESIGNATION" />
+                        <TableColumn fx:id="colRetireDate" prefWidth="216.0" text="RETIRE DATE" />
+                    </columns>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem fx:id="menuViewHistory" mnemonicParsing="false" onAction="#acceptGratuities" text="Accept" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+                  <ProgressIndicator fx:id="progressIndicator" layoutX="491.0" layoutY="161.0" prefHeight="62.0" prefWidth="103.0" progress="0.0" />
+               </children>
+            </AnchorPane>
+         </center>
+        </BorderPane>
+    </children>
+    <stylesheets>
+        <URL value="@../../css/custom.css" />
+        <URL value="@../../css/JMetroLightTheme.css" />
+    </stylesheets>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</AnchorPane>
