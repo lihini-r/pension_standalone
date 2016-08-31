@@ -1,6 +1,3 @@
 target/*
 build/*
-.settings
 .idea
-.classpath
-.project
