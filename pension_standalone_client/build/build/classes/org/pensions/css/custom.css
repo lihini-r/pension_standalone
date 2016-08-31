@@ -1,0 +1,121 @@
+.topLevelManuItem {
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	-fx-opacity: 0.5;
+	-fx-alignment: bottom-center ;
+	-fx-blend-mode: hard-light ;
+	-fx-cursor: hand;
+	-fx-font-size: 15px;
+	-fx-text-fill: rgb(255,255,255);
+}
+
+.topLevelManuItem:hover{
+	-fx-opacity: 1.0;
+}
+
+.topLevelManuItem:pressed{
+}
+
+.sideBarManuItem {
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	-fx-opacity: 0.5;
+	-fx-alignment: center-left;
+	-fx-blend-mode: hard-light;
+	-fx-cursor: hand;
+	-fx-font-size: 16px;
+	-fx-text-fill: rgb(255,255,255);
+	-fx-padding: 0 0 0 20;
+	-fx-graphic-text-gap: 15;
+	-fx-background-color: transparent;
+}
+
+.sideBarManuItem:hover {
+	-fx-opacity: 1.0;
+	-fx-border-width: 1 0 1 0;
+	-fx-border-color: rgb(255,255,255);
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.main_nav_selected {
+	-fx-text-fill: rgb(0,0,0);
+	-fx-opacity: 1.0;
+	-fx-border-width: 1 0 1 0;
+	-fx-border-color: rgb(255,255,255);
+	-fx-background-image: url(/org/pensions/resources/bg1.png);
+}
+
+.sub_nav_selected {
+	-fx-background-color: #0078D7;
+	-fx-border-color: rgb(0,0,0);
+	-fx-opacity: 1.0;
+	-fx-border-width: 0 0 0 0;
+	-fx-border-color: rgb(255,255,255);
+}
+
+.scroll-pane > .viewport {
+	-fx-background-color: transparent ;
+	
+}
+
+.scroll-pane {
+	-fx-background-color: transparent ;
+}
+
+.sideButton {
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	-fx-opacity: 0.5;
+	-fx-alignment: center-left  ;
+	-fx-blend-mode: hard-light ;
+	-fx-cursor: hand;
+	-fx-font-size: 12px;
+	-fx-background-color: #83B2E2;
+	-fx-text-fill: rgb(255,255,255);
+}
+
+.sideButton:hover{
+	-fx-opacity: 1.0;
+}
+
+.closeButton {
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	-fx-alignment: center-left  ;
+	-fx-blend-mode: hard-light ;
+	-fx-cursor: hand;
+	-fx-font-size: 12px;
+	-fx-font-weight: bolder;
+	-fx-background-color: #212121;
+	-fx-text-fill: rgb(255,255,255);
+}
+
+.closeButton:hover{
+	-fx-background-color: #F44336;
+	-fx-text-fill: #ffffff;
+}
+
+/** contextcolor.css
+ *   place in same folder as ContextColor.java
+ *   ensure your build system copies this file to the ContextColor.class output directory on build
+ */
+.context-menu {
+	-fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+	-fx-padding: 0px 0px 0px 0px;
+	-fx-min-width: 200px;
+}
+
+
+/* Selected row hovered */
+.search-table .table-row-cell:filled {
+    -fx-padding: 5px 0;
+}
+
+
+/* css for property description labels **/
+.property-label {
+	-fx-text-fill: #808080;
+}
